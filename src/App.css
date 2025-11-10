@@ -1,38 +1,84 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  animation: fadeIn 1s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #66a6ff;
+  box-shadow: 0 0 10px rgba(102, 166, 255, 0.7);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.name {
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  min-height: 2rem;
+}
+
+.cursor {
+  display: inline-block;
+  color: #66a6ff;
+  font-weight: bold;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.1%, 100% { opacity: 0; }
+}
+
+.status {
+  margin: 8px 0 20px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.socials a {
+  text-decoration: none;
   color: white;
+  background: #66a6ff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 0 5px;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.socials a:hover {
+  background: #4b7bec;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #4b7bec;
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
